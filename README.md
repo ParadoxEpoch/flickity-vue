@@ -1,32 +1,28 @@
 # Flickity for Vue.js
 
-[![npm](https://img.shields.io/npm/v/vue-flickity.svg?style=flat-square)](https://www.npmjs.com/package/vue-flickity)
-[![npm](https://img.shields.io/npm/dt/vue-flickity.svg?style=flat-square)](https://www.npmjs.com/package/vue-flickity)
-[![npm](https://img.shields.io/travis/drewjbartlett/vue-flickity.svg?branch=master&style=flat-square)](https://www.npmjs.com/package/vue-flickity)
+[![npm](https://img.shields.io/npm/v/flickity-vue.svg?style=flat-square)](https://www.npmjs.com/package/flickity-vue)
+[![npm](https://img.shields.io/npm/dt/flickity-vue.svg?style=flat-square)](https://www.npmjs.com/package/flickity-vue)
 
-A Vue Component for Flickity.js - See a live demo [here](http://drewjbartlett.com/demos/vue-flickity/).
+A Vue Component for Flickity.js.
+Forked from [vue-flickity](https://github.com/drewjbartlett/vue-flickity) to use a native ES6 static import for compatibility with [Vite](https://vitejs.dev/)
 
 <p align="center">
-    <img width="200" src="http://flickity.metafizzy.co/img/flickity-illustration.gif" alt="Flickity">
+    <img width="200" src="https://flickity.metafizzy.co/img/flickity-illustration.png" alt="Flickity">
     <img width="200" src="https://vuejs.org/images/logo.png" alt="Vue.js">
 </p>
-
-## Vue support
-
-Supports only Vue >= 2
 
 ## Installation and usage
 
 See official documentation [here](http://flickity.metafizzy.co/).
 
-  $ npm install vue-flickity --save
+  $ npm install flickity-vue
 
 ```js
-import Flickity from 'vue-flickity';
+import FlickitySlider from 'flickity-vue';
 
 new Vue({
   components: {
-    Flickity
+    FlickitySlider
   },
   
   data() {
@@ -55,13 +51,13 @@ new Vue({
 ```
 
 ```html
-<flickity ref="flickity" :options="flickityOptions">
+<FlickitySlider ref="flickity" :options="flickityOptions">
   <div class="carousel-cell">1</div>
   <div class="carousel-cell">2</div>
   <div class="carousel-cell">3</div>
   <div class="carousel-cell">4</div>
   <div class="carousel-cell">5</div>
-</flickity>
+</FlickitySlider>
 
 <!-- if you don't want to use the buttons Flickity provides -->
 <button @click="previous()">Custom Previous Button</button>
